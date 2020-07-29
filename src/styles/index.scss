@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+$padding: 5;
+$neobox-multiplier: 2;
+
+$main-bg: rgb(248, 248, 248);
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body,
+#root {
+	width: 100%;
+	height: 100%;
+}
+
+.app {
+	background-color: $main-bg;
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto', sans-serif;
+}
+
+button {
+	font-family: 'Open Sans', sans-serif;
+}
+
+@for $i from 0 through 10 {
+	.p-#{$i} {
+		padding: #{$i * $padding}px;
+	}
+}
+
+@for $i from 0 through 10 {
+	.m-#{$i} {
+		margin: #{$i * $padding}px;
+	}
+}
+
+@for $i from 0 through 10 {
+	.mt-#{$i} {
+		margin-top: #{$i * $padding}px;
+	}
+}
+
+@for $i from 0 through 10 {
+	.mb-#{$i} {
+		margin-bottom: #{$i * $padding}px;
+	}
+}
+
+@for $i from 0 through 10 {
+	.ml-#{$i} {
+		margin-left: #{$i * $padding}px;
+	}
+}
+
+@for $i from 0 through 10 {
+	.mr-#{$i} {
+		margin-right: #{$i * $padding}px;
+	}
+}
+
+@for $i from 0 through 10 {
+	.pt-#{$i} {
+		padding-top: #{$i * $padding}px;
+	}
+}
+
+@for $i from 0 through 10 {
+	.pb-#{$i} {
+		padding-bottom: #{$i * $padding}px;
+	}
+}
+
+@for $i from 0 through 10 {
+	.pl-#{$i} {
+		padding-left: #{$i * $padding}px;
+	}
+}
+
+@for $i from 0 through 10 {
+	.pr-#{$i} {
+		padding-right: #{$i * $padding}px;
+	}
+}
+
+.neobox {
+	background-color: white;
+	border-radius: 7px;
+	margin: 20px;
+	border: lightgray solid 1px;
+}
+
+.fullscreen {
+	width: 100%;
+	height: 100%;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-ui {
+	min-width: 500px;
+}
+
+.form-title {
+	text-align: center;
+	color: rgba(black, 0.9);
+	font-weight: lighter;
+	margin-bottom: 20px;
+}
+
+.btn {
+	border-radius: 7px;
+	padding: 13px 20px;
+	border: none;
+	outline: none;
+	background-color: $blue;
+	color: white;
+	font-weight: bold;
+	transition: all 0.2s ease;
+	font-size: 1em;
+	&:hover {
+		background-color: darken($blue, 10%);
+		cursor: pointer;
+	}
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.input-group {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	// border-bottom: lightgray solid 1px;
+	margin: 0 20px;
+	align-items: center;
+	// transition: all 0.2s ease;
+	label {
+		font-size: 1.1em;
+		font-family: 'Open Sans', sans-serif;
+		opacity: 0.7;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	input {
+		background-color: white;
+		border: none;
+		outline: none;
+		padding: 5px 20px;
+		height: 30px;
+		font-size: 1.4em;
+		font-weight: 400;
+		&:focus {
+			& + .border {
+				background-color: $blue;
+			}
+		}
+	}
+	.border {
+		content: '';
+		display: block;
+		height: 1px;
+		background-color: lightgray;
+		width: 100%;
+	}
+}
